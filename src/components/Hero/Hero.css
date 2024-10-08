@@ -1,13 +1,13 @@
 .hero{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 35px;
 }
 .hero img {
-  margin-top: 150px;
-  border: 2px solid green;
+  margin-top: 120px;
+  /* border: 2px solid green; */
   height: 300px;
   width: 300px; /* Square dimensions */
   border-radius: 50%; /* Circular image */
@@ -35,7 +35,7 @@
   line-height: 40px;
 }
 .hero-action{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   align-items: center;
   gap: 60px;
