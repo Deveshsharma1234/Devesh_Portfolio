@@ -1,0 +1,130 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+  background-color: #1b1b1b; /* Dark background */
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+.services-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-title h1 {
+  position: relative; /* Ensure the h1 is positioned relative for z-index to work */
+  font-size: 80px;
+  font-weight: 600;
+  z-index: 2; /* Higher z-index to ensure text is on top */
+  color: #9b59b6; /* Purple color for the title */
+}
+
+.services-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image behind the title */
+  z-index: 1; /* Lower z-index to ensure it's behind the h1 */
+  max-width: 400px; /* Adjust the size of the image as needed */
+  opacity: 0.2; /* Make the image subtle */
+  pointer-events: none; /* Prevent interaction with the image */
+}
+
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.services-format {
+  background: #333; /* Darker background for the service cards */
+  padding: 30px;
+  border-radius: 15px;
+  color: #ccc; /* Lighter text */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.services-format h3 {
+  font-size: 1.5rem;
+  color: #9b59b6; /* Purple color for subheadings */
+  margin-bottom: 10px;
+}
+
+.services-format h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.services-format p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #bfbfbf; /* Lighter text */
+}
+
+.services-reademore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.services-reademore p {
+  font-weight: bold;
+  color: #9b59b6; /* Purple color */
+}
+
+.services-reademore img {
+  width: 16px;
+  transition: transform 0.3s;
+}
+
+.services-format:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+.services-reademore:hover p {
+  color: #fff; /* Change to white on hover */
+}
+
+.services-reademore:hover img {
+  transform: translateX(5px);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 4 columns */
+  gap: 40px;
+}
+
+@media (max-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr); /* For screens smaller than 1200px, show 3 services per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* For screens smaller than 900px, show 2 services per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .services-container {
+    grid-template-columns: 1fr; /* For smaller screens, show 1 service per row */
+  }
+}
