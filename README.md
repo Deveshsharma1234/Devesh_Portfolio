@@ -24,3 +24,8 @@ Currently, two official plugins are available for React in Vite:
 
    ```bash
    git clone https://github.com/your-username/react-vite-project.git
+   cd react-vite-project
+   npm install
+   npm run dev
+   npm run build
+   npm run preview
