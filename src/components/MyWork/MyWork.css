@@ -1,0 +1,102 @@
+.myWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+  background-color: #1b1b1b; /* Dark background */
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.myWork-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.myWork-title h1 {
+  position: relative;
+  font-size: 80px;
+  font-weight: 600;
+  z-index: 2;
+  color: #9b59b6; /* Purple color */
+}
+
+.myWork-title img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  max-width: 400px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.myWork-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.work-format {
+  background-color: #333; /* Darker background for work items */
+  padding: 30px;
+  border-radius: 15px;
+  color: #ccc; /* Lighter text */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.work-format h3 {
+  font-size: 1.5rem;
+  color: #9b59b6; /* Purple for numbering */
+  margin-bottom: 10px;
+}
+
+.work-format h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.work-image {
+  margin: 20px 0;
+  background-color: #353546;
+  height: 250px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #a29bfe; /* Light purple for image area */
+}
+
+.work-format:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+@media (max-width: 1200px) {
+  .myWork-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .myWork-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .myWork-container {
+    grid-template-columns: 1fr; /* Single column for extra small screens */
+  }
+}
